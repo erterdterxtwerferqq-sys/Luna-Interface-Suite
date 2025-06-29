@@ -1,4 +1,5 @@
 # Introduction
+![Luna](https://raw.githubusercontent.com/Nebula-Softworks/Luna-Interface-Suite/refs/heads/master/Luna%20Cover%20Image.png)
 This Documentation Is Last Updated for Prerelease Beta 6.1
 ## Why Choose Luna?
   Reliable And Stable  
@@ -9,7 +10,7 @@ This Documentation Is Last Updated for Prerelease Beta 6.1
   
 *Now Let's Get Started, Shall We?*
 
-**Also hope shlex will add this docs.sirius.menu but its fine here lol**  
+**Migrating To The Documentation Page *VERY* Soon. However for now, it is here.**  
 
 ***You may use the github MD Sidebar to navigate through the documentation***
 
