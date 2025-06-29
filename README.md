@@ -1,6 +1,7 @@
-# As Of April 22 2025, Luna Is Officially Discontinued And Will Be Deprecated Soon With The Upcoming Release Of [Starlight](https://github.com/Nebula-Softworks/Starlight-Interface-Suite) On June 30 2025.  
+# As Of April 22 2025, Luna Is Officially Discontinued And is Deprecated Soon With The Release Of [Starlight](https://github.com/Nebula-Softworks/Starlight-Interface-Suite)
   
-#### The Library Will Still Be Usable, But Will No Longer Receive Updates (Including Bug Fixes and Patches), Meaning It Is Highly Dis-recommended. We Will Eventually Start Auto-Migrating Scripts Using Luna To Starlight In The Near Future Once It Is Released. However, If You Insist On Using Luna, A Way Will Be Added To Still Use It Via getgenv() Variables. Thank You For Your Understanding.
+#### The Library Will Still Be Usable, ~~But Will No Longer Receive Updates (Including Bug Fixes and Patches), Meaning It Is Highly Dis-recommended.~~ On behalf of the rest of Nebula Softworks, Thank you all for being part of the amazing journey of creating Luna. But with all things in life, it isn't permanent. We have moved on from Luna, into something more - Starlight. Thank You For Your Understanding.  
+#### We Will still make Luna Usable, and may give it maintanence updates every now and then
   
 ----
   
