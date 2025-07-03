@@ -21,6 +21,11 @@ Latte Softworks and qweery | Lucide Icons And Material Icons
 kirill9655 | Loading Circle
 Deity/dp4pv/x64x70 | Certain Scripting and Testing ig
 
+Contributors
+iPigTw | Typo Fixer, Fixed Key System!!
+pushByAccident | Fixing Executor Lists
+ImFloriz | Method Fixing
+
 ]]
 
 local Release = "Prerelease Beta 6.1"
