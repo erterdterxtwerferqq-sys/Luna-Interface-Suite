@@ -155,8 +155,6 @@ local Toggle = Tab:CreateToggle({
 ```
 
 #### Creating A Color Picker
-> [!WARNING]
-Color Pickers Are Not Completed And May Have Minor Bugs And Flags Aren't Completely Finished Yet.
 ```lua
 local ColorPicker = Tab:CreateColorPicker({
 	Name = "Color Picker Example",
@@ -183,7 +181,7 @@ local Slider = Tab:CreateSlider({
 }, "Slider") -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
 ```
 
-#### Creating A Dynamic Input (Adaptive Input AKA Textbox)
+#### Creating A Dynamic Input (Textbox)
 ```lua
 local Input = Tab:CreateInput({
 	Name = "Dynamic Input Example",
@@ -368,12 +366,12 @@ Tab:BuildThemeSection() -- Tab Should be the name of the tab you are adding this
 
 #### Setting Up Configuration Tab
 Create the config section that uses our Flag System Technology to save your configurations
-> [!WARNING]
-> Until Future Releases, The Config Section Must Be Placed At The VERY BOTTOM of your ENTIRE script for Autoload to work.
 ```lua
 Tab:BuildConfigSection() -- Tab Should be the name of the tab you are adding this section to.
 ```
-
+> [!TIP]  
+> Add `Luna:LoadAutoloadConfig` At very bottom of your code. this will load your users' autoloaded config  
+  
 ### Credits
 
 Main Developers:  
@@ -387,7 +385,10 @@ Helpers/Side Developers:
  `Tarmac and qweery` - Icon Modules  
  kirill9655 - Loading Circle and Certain Images  
  Sirius Discord Members - Feedback, Suggestions And Testers  
- Inori - Configuration Concept
+ Inori - Configuration Concept  
+`iPigTw` - Fixing Key System (also some typos)  
+pushByAccident - Fixing Home Tab Executor List  
+ImFloriz - Method Fixing  
 
 > [!NOTE]
 > If Your Name Is in a `box like this`, it means you contributed a lot.
