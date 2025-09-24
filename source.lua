@@ -3481,7 +3481,7 @@ function Luna:CreateWindow(WindowSettings)
 							Bind.BindFrame.BindBox.Text = tostring(NewKeyNoEnum)
 							BindSettings.CurrentBind = tostring(NewKeyNoEnum)
 							local Success, Response = pcall(function()
-								BindSettings.Callback(BindSettings.CurrentBind)
+								BindSettings.OnChangedCallback(BindSettings.CurrentBind)
 							end)
 							if not Success then
 								TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
@@ -5068,7 +5068,7 @@ function Luna:CreateWindow(WindowSettings)
 						Bind.BindFrame.BindBox.Text = tostring(NewKeyNoEnum)
 						BindSettings.CurrentBind = tostring(NewKeyNoEnum)
 						local Success, Response = pcall(function()
-							BindSettings.Callback(BindSettings.CurrentBind)
+							BindSettings.OnChangedCallback(BindSettings.CurrentBind)
 						end)
 						if not Success then
 							TweenService:Create(Bind, TweenInfo.new(0.7, Enum.EasingStyle.Exponential), {BackgroundTransparency = 0}):Play()
@@ -6746,6 +6746,15 @@ function Luna:Destroy()
 		end
 	end
 	LunaUI:Destroy()
+end
+
+if (getgenv and not getgenv().ConfirmLuna) or (not getgenv) then
+	Luna:Notification({ 
+    	Title = "Luna Is Deprecated",
+    	Icon = "warning",
+    	ImageSource = "Material",
+    	Content = "If you are not the script developer, ignore this message. \n\n The Luna Interface Library Is Deprecated And Not Recommended to Use. A New Library Is Available at nebulasoftworks.xyz/starlight. If you insist on using Luna, set the getgenv().ConfirmLuna variable to true. "
+	})
 end
 
 if isStudio then
