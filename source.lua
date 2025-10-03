@@ -2513,7 +2513,7 @@ function Luna:CreateWindow(WindowSettings)
 	Draggable(Dragger, Main)
 	Draggable(LunaUI.MobileSupport, LunaUI.MobileSupport)
 	if dragBar then Draggable(dragInteract, Main, true, 255) end
-
+    LunaUI.MobileSupport.Interact.Text = "Toggle Syla"
 	Elements.Template.LayoutOrder = 1000000000
 	Elements.Template.Visible = false
 	Navigation.Tabs["InActive Template"].LayoutOrder = 1000000000
@@ -2569,7 +2569,7 @@ function Luna:CreateWindow(WindowSettings)
 
 
 		HomeTabPage.icon.ImageLabel.Image = "rbxassetid://78976971"
-		HomeTabPage.player.Text.Text = "Hello, " .. Players.LocalPlayer.DisplayName
+		HomeTabPage.player.Text.Text = "Greetings, " .. Players.LocalPlayer.Name
 		HomeTabPage.player.user.Text = Players.LocalPlayer.Name .. " - ".. WindowSettings.Name
 
 		HomeTabPage.detailsholder.dashboard.Client.Title.Text = (isStudio and "Debugging (Studio)" or identifyexecutor()) or "Your Executor Does Not Support Syla V2 identifyexecutor :("
