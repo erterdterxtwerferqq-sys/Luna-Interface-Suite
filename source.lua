@@ -2568,7 +2568,7 @@ function Luna:CreateWindow(WindowSettings)
 		end)
 
 
-		HomeTabPage.icon.ImageLabel.Image = "rbxassetid://78976971"
+		HomeTabPage.icon.ImageLabel.Image = "rbxassetid://59414129"
 		HomeTabPage.player.Text.Text = "Greetings, " .. Players.LocalPlayer.Name
 		HomeTabPage.player.user.Text = Players.LocalPlayer.Name .. " - ".. WindowSettings.Name
 
