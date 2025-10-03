@@ -2561,7 +2561,7 @@ function Luna:CreateWindow(WindowSettings)
 		end)
 
 
-		HomeTabPage.icon.ImageLabel.Image = "rbxassetid://59414129"
+		HomeTabPage.icon.ImageLabel.Image = "rbxassetid://129907976447380"
 		HomeTabPage.player.Text.Text = "Greetings, " .. Players.LocalPlayer.Name
 		HomeTabPage.player.user.Text = Players.LocalPlayer.Name .. " - ".. WindowSettings.Name
 
@@ -2663,8 +2663,8 @@ function Luna:CreateWindow(WindowSettings)
 
 
 				-- Players
-				HomeTabPage.detailsholder.dashboard.Server.Players.Value.Text = #Players:GetPlayers().." playing"
-				HomeTabPage.detailsholder.dashboard.Server.MaxPlayers.Value.Text = Players.MaxPlayers.." players can join this server"
+				HomeTabPage.detailsholder.dashboard.Server.Players.Value.Text = #Players:GetPlayers().." is In Your Server"
+				HomeTabPage.detailsholder.dashboard.Server.MaxPlayers.Value.Text = Players.MaxPlayers.." Players can join this server"
 
 				-- Ping
 				HomeTabPage.detailsholder.dashboard.Server.Latency.Value.Text = isStudio and tostring(math.round((Players.LocalPlayer:GetNetworkPing() * 2 ) / 0.01)) .."ms" or tostring(math.floor(getPing()) .."ms")
@@ -2673,7 +2673,7 @@ function Luna:CreateWindow(WindowSettings)
 				HomeTabPage.detailsholder.dashboard.Server.Time.Value.Text = convertToHMS(time())
 
 				-- Region
-				HomeTabPage.detailsholder.dashboard.Server.Region.Value.Text = Localization:GetCountryRegionForPlayerAsync(Players.LocalPlayer)
+				HomeTabPage.detailsholder.dashboard.Server.Region.Value.Text = "Syla Don't need ur Region."
 
 				checkFriends()
 			end
