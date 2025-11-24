@@ -2565,17 +2565,31 @@ function Luna:CreateWindow(WindowSettings)
 
 
 		HomeTabPage.icon.ImageLabel.Image = "rbxassetid://129907976447380"
-		HomeTabPage.player.Text.Text = "Greetings, " .. Players.LocalPlayer.Name
+local Players = game:GetService("Players")
+local hour = tonumber(os.date("%H"))
+local greeting = ""
+
+if hour >= 5 and hour < 12 then
+	greeting = "Good Morning"
+elseif hour >= 12 and hour < 17 then
+	greeting = "Good Afternoon"
+elseif hour >= 17 and hour < 21 then
+	greeting = "Good Evening"
+else
+	greeting = "Good Night"
+end
+
+HomeTabPage.player.Text.Text = greeting .. ", " .. Players.LocalPlayer.Name
 		HomeTabPage.player.user.Text = Players.LocalPlayer.Name .. " - ".. WindowSettings.Name
 
 		HomeTabPage.detailsholder.dashboard.Client.Title.Text = (isStudio and "Debugging (Studio)" or identifyexecutor()) or "Your Executor Does Not Support Syla V2 identifyexecutor :("
 		for i,v in pairs(HomeTabSettings.SupportedExecutors) do
 			if isStudio then HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Luna Interface Suite - Debugging Mode" break end
 			if v == identifyexecutor() then
-				HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Your Executor Support Syla V2🎃"
+				HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Your Executor Support Syla V2☃️"
 				break
 			else
-				HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Your Executor Support Syla V2🎃"
+				HomeTabPage.detailsholder.dashboard.Client.Subtitle.Text = "Your Executor Support Syla V2☃️"
 				break
 			end
 		end
