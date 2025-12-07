@@ -2564,7 +2564,7 @@ function Luna:CreateWindow(WindowSettings)
 		end)
 
 
-		HomeTabPage.icon.ImageLabel.Image = "rbxassetid://129907976447380"
+		HomeTabPage.icon.ImageLabel.Image = "rbxassetid://115073833004155"
 local Players = game:GetService("Players")
 local hour = tonumber(os.date("%H"))
 local greeting = ""
