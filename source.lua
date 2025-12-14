@@ -1861,13 +1861,24 @@ local LunaUI = isStudio and script.Parent:WaitForChild("Syla V2🎃") or game:Ge
 
 local SizeBleh = nil
 
+local UserInputService = game:GetService("UserInputService")
+
 local function Hide(Window, bind, notif)
 	SizeBleh = Window.Size
 	bind = string.split(tostring(bind), "Enum.KeyCode.")
 	bind = bind[2]
+
 	if notif then
-		Luna:Notification({Title = "Interface Hidden", Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")", Icon = "visibility_off"})
+		local duration = UserInputService.TouchEnabled and 2 or 3
+
+		Luna:Notification({
+			Title = "Interface Hidden",
+			Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")",
+			Icon = "visibility_off",
+			Duration = duration
+		})
 	end
+
 	tween(Window, {BackgroundTransparency = 1})
 	tween(Window.Elements, {BackgroundTransparency = 1})
 	tween(Window.Line, {BackgroundTransparency = 1})
@@ -1884,6 +1895,7 @@ local function Hide(Window, bind, notif)
 			TopbarButton.Visible = false
 		end
 	end
+
 	for _, tabbtn in ipairs(Window.Navigation.Tabs:GetChildren()) do
 		if tabbtn.ClassName == "Frame" and tabbtn.Name ~= "InActive Template" then
 			TweenService:Create(tabbtn, TweenInfo.new(0.3, Enum.EasingStyle.Exponential), {BackgroundTransparency = 1}):Play()
@@ -1900,6 +1912,7 @@ local function Hide(Window, bind, notif)
 	Window.Elements.Parent.Visible = false
 	Window.Visible = false
 end
+
 
 
 if gethui then
