@@ -1859,7 +1859,9 @@ end
 -- Interface Management
 local LunaUI = isStudio and script.Parent:WaitForChild("Syla V2🎃") or game:GetObjects("rbxassetid://86467455075715")[1]
 
+
 local SizeBleh = nil
+
 local UserInputService = game:GetService("UserInputService")
 
 local function Hide(Window, bind, notif)
@@ -1867,15 +1869,17 @@ local function Hide(Window, bind, notif)
 	bind = string.split(tostring(bind), "Enum.KeyCode.")
 	bind = bind[2]
 
-	if notif and not UserInputService.TouchEnabled then
+	if notif then
+		Luna:Notification({Title = "Interface Hidden", Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")", Icon = "visibility_off"})
+		local duration = UserInputService.TouchEnabled and 1 or 2
+
 		Luna:Notification({
 			Title = "Interface Hidden",
-			Content = "The interface has been hidden. You can reopen it by pressing the UI bind in Settings (" .. tostring(bind) .. ")",
+			Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")",
 			Icon = "visibility_off",
-			Duration = 3
+			Duration = duration
 		})
 	end
-end
 
 
 	tween(Window, {BackgroundTransparency = 1})
