@@ -1870,7 +1870,6 @@ local function Hide(Window, bind, notif)
 	bind = bind[2]
 
 	if notif then
-		Luna:Notification({Title = "Interface Hidden", Content = "The interface has been hidden, you may reopen the interface by Pressing the UI Bind In Settings ("..tostring(bind)..")", Icon = "visibility_off"})
 		local duration = UserInputService.TouchEnabled and 1 or 2
 
 		Luna:Notification({
